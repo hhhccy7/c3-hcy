@@ -5,7 +5,7 @@ public class Task1 {
         Scanner in = new Scanner(System.in);
 
         System.out.println("输入体重(kg):");
-        int weight = in.nextInt();
+        double weight = in.nextDouble();
 
         System.out.println("输入身高(m):");
         double height = in.nextDouble();
