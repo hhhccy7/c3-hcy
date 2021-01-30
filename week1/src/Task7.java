@@ -22,36 +22,48 @@ public class Task7 {
         Scanner in = new Scanner(System.in);
         int a = in.nextInt();
         int b = in.nextInt();
-        Complex c1 = new Complex(a,b);
+        Complex c1 = new Complex(a, b);
 
         a = in.nextInt();
         b = in.nextInt();
-        Complex c2 = new Complex(a,b);
-        System.out.println("add:"+c1.add(c2));
-        System.out.println("reduce:"+c1.reduce(c2));
-        System.out.println("multiple:"+c1.multiple(c2));
+        Complex c2 = new Complex(a, b);
+        System.out.println("add:" + c1.add(c2));
+        System.out.println("reduce:" + c1.reduce(c2));
+        System.out.println("multiple:" + c1.multiply(c2));
     }
 }
 
-class Complex{
-    int a,b;
+class Complex {
+    private int a, b;
 
     public Complex(int a, int b) {
         this.a = a;
         this.b = b;
     }
 
-    public Complex add(Complex that){
-        return new Complex(this.a+that.a,this.b+that.b);
+    public Complex add(Complex that) {
+        return new Complex(this.a + that.a, this.b + that.b);
     }
-    public Complex reduce(Complex that){
-        return new Complex(this.a-that.a,this.b-that.b);
+
+    public Complex reduce(Complex that) {
+        return new Complex(this.a - that.a, this.b - that.b);
     }
-    public Complex multiple(Complex that){
-        return new Complex(this.a* that.a-this.b* that.b,this.a* that.b+this.b*that.a);
+
+    public Complex multiply(Complex that) {
+        return new Complex(this.a * that.a - this.b * that.b, this.a * that.b + this.b * that.a);
     }
+
     @Override
     public String toString() {
-        return a+"+"+ (b==1?"":b) + 'i';
+        if(a==0&&b==0) return "0";//实部虚部同为0时候 返回0
+        String str ;
+        //不同为0时
+        if(a==0){
+            return b+"i";
+        }
+        if(b==0){
+            return a+"";
+        }
+        return a+(b>0?"+":"")+(b==1?"":(b==-1?"-":b))+"i";
     }
 }

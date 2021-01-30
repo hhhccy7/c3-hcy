@@ -3,11 +3,13 @@ public class Task8 {
 
     }
 }
-interface ganfan{
+
+interface ganfan {
     void eat();
 }
-class Animal implements ganfan{
-    double height,weight;
+
+class Animal implements ganfan {
+    double height, weight;
 
     public double getHeight() {
         return height;
@@ -25,21 +27,23 @@ class Animal implements ganfan{
         this.weight = weight;
     }
 
-    public void eat(){
-            System.out.println("干饭");
-        }
-        public void sleep(){
-            System.out.println("睡觉");
-        }
+    public void eat() {
+        System.out.println("干饭");
+    }
+
+    public void sleep() {
+        System.out.println("睡觉");
+    }
 }
 
-class Tiger extends Animal{
+class Tiger extends Animal {
     @Override
     public void eat() {
         System.out.println("吃肉");
     }
 }
-class Rabbit extends Animal{
+
+class Rabbit extends Animal {
     @Override
     public void eat() {
         System.out.println("吃草");
