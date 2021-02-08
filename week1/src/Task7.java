@@ -16,6 +16,8 @@ import java.util.Scanner;
 两复数相减的结果为：1+i
 两复数相乘的结果为：-4+7i
  */
+
+
 public class Task7 {
 
     public static void main(String[] args) {
@@ -63,7 +65,8 @@ class Complex {
         }
         if(b==0){
             return a+"";
-        }
+        }//使用三目运算符 表达式?a:b   了解使用，不用深入理解
+        //此处在于给大家讲解toString方法的重写，并在作为String类型参数时候自动调用toString方法
         return a+(b>0?"+":"")+(b==1?"":(b==-1?"-":b))+"i";
     }
 }

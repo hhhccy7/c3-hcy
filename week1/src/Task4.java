@@ -24,15 +24,17 @@ public class Task4 {
         }
     }
     public static void moveZero(int[] numbers){
-        int pos=0;
+        int pos=0;//指针
+
         for (int i = 0; i < numbers.length; i++) {
-            if(0 != numbers[i]){
+            if(0!=numbers[i]){
                 numbers[pos] = numbers[i];
                 pos++;
             }
         }
-        for (; pos < numbers.length; pos++) {
+        for (; pos< numbers.length;pos++){
             numbers[pos] = 0;
         }
+
     }
 }

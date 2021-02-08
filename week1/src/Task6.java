@@ -12,8 +12,9 @@ public class Task6 {
         String name =  in.nextLine();
         System.out.println("输入开户金额:");
         double money =  in.nextDouble();
-        Account account = new Account(name,money);
-        account.getMoney();
+        Account account1 = new Account(name,money);
+        Account account2 = new Account(name,money);
+        account1.getMoney();
     }
 }
 class Account{
