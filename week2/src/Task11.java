@@ -1,4 +1,3 @@
-import java.util.concurrent.LinkedBlockingDeque;
 
 class Link{
     private class Node{
@@ -210,7 +209,6 @@ public class Task11 {
         shop.add(new Cat("波米拉猫", 1));
         shop.add(new Dog("松狮", 1));
         shop.add(new Dog("波尔多", 2));
-//        shop.add(new Cat("波米拉猫", 9));
         shop.delete(new Cat("波米拉猫", 1));
         Link all = shop.search("波");
         Object[] obj = all.toArray();
